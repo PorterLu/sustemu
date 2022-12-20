@@ -1,0 +1,38 @@
+mainmenu "CPU difftest environment"
+
+menu "device"
+config keyboard
+	bool "keyboard"
+	default y
+
+config gpu
+	bool "gpu"
+	default y
+
+config timer
+	bool "timer"
+	default y
+
+config serial
+	bool "serial"
+	default y
+endmenu
+
+menu "trace"
+config ftrace
+	bool "ftrace"
+	default y
+
+config mtrace 
+	bool "mtrace"
+	default y
+
+config itrace
+	bool "itrace"
+	default y
+
+config ringbuf
+	bool "ringbuf"
+	depends on itrace
+	default y
+endmenu
